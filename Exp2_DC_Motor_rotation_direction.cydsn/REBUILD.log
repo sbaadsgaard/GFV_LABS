@@ -1,0 +1,3 @@
+--------------- Rebuild Started: 02/11/2022 11:35:36 Project: util.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/util.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c util.c -o .\CortexM3\ARM_GCC_541\Debug\util.o
+--------------- Rebuild Succeeded: 02/11/2022 11:35:37 ---------------
