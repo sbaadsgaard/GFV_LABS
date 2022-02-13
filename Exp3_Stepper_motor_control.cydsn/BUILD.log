@@ -1,14 +1,21 @@
---------------- Build Started: 02/11/2022 16:39:34 Project: Stepper_Motor, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 02/13/2022 10:09:59 Project: Exp3_Stepper_motor_control, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/util.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c util.c -o .\CortexM3\ARM_GCC_541\Debug\util.o
-arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Stepper_Motor.a .\CortexM3\ARM_GCC_541\Debug\Timer_1.o .\CortexM3\ARM_GCC_541\Debug\Timer_1_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_1.o .\CortexM3\ARM_GCC_541\Debug\UART_1_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_1_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_1_BOOT.o .\CortexM3\ARM_GCC_541\Debug\Pin_1a.o .\CortexM3\ARM_GCC_541\Debug\Pin_1b.o .\CortexM3\ARM_GCC_541\Debug\Pin_2a.o .\CortexM3\ARM_GCC_541\Debug\Pin_2b.o .\CortexM3\ARM_GCC_541\Debug\isr_timer.o .\CortexM3\ARM_GCC_541\Debug\isr_uart_rx.o .\CortexM3\ARM_GCC_541\Debug\UART_1_IntClock.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\timer_clock.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
-arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\Stepper_Motor.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn\CortexM3\ARM_GCC_541\Debug\Stepper_Motor.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\controls.o .\CortexM3\ARM_GCC_541\Debug\util.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\Stepper_Motor.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/Stepper_Motor.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
-cyelftool.exe -C C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn\CortexM3\ARM_GCC_541\Debug\Stepper_Motor.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/controls.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c controls.c -o .\CortexM3\ARM_GCC_541\Debug\controls.o
+controls.c: In function 'waveDrive':
+controls.c:33:5: warning: enumeration value 'STATOR_STATE_1A_1B' not handled in switch [-Wswitch]
+     switch(stator)
+     ^
+controls.c:33:5: warning: enumeration value 'STATOR_STATE_1B_2A' not handled in switch [-Wswitch]
+controls.c:33:5: warning: enumeration value 'STATOR_STATE_2A_2B' not handled in switch [-Wswitch]
+controls.c:33:5: warning: enumeration value 'STATOR_STATE_2B_1A' not handled in switch [-Wswitch]
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Exp3_Stepper_motor_control.a .\CortexM3\ARM_GCC_541\Debug\timer_clock.o .\CortexM3\ARM_GCC_541\Debug\Timer_1.o .\CortexM3\ARM_GCC_541\Debug\Timer_1_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_1.o .\CortexM3\ARM_GCC_541\Debug\UART_1_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_1_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_1_BOOT.o .\CortexM3\ARM_GCC_541\Debug\Pin_1a.o .\CortexM3\ARM_GCC_541\Debug\Pin_1b.o .\CortexM3\ARM_GCC_541\Debug\Pin_2a.o .\CortexM3\ARM_GCC_541\Debug\Pin_2b.o .\CortexM3\ARM_GCC_541\Debug\isr_timer.o .\CortexM3\ARM_GCC_541\Debug\isr_uart_rx.o .\CortexM3\ARM_GCC_541\Debug\UART_1_IntClock.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\Exp3_Stepper_motor_control.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn\CortexM3\ARM_GCC_541\Debug\Exp3_Stepper_motor_control.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\controls.o .\CortexM3\ARM_GCC_541\Debug\util.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\Exp3_Stepper_motor_control.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/Exp3_Stepper_motor_control.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn\CortexM3\ARM_GCC_541\Debug\Exp3_Stepper_motor_control.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
 No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
-cyelftool.exe -S C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn\CortexM3\ARM_GCC_541\Debug\Stepper_Motor.elf
-Flash used: 3430 of 262144 bytes (1.3%).
-SRAM used: 2521 of 65536 bytes (3.8%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 02/11/2022 16:39:35 ---------------
+cyelftool.exe -S C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn\CortexM3\ARM_GCC_541\Debug\Exp3_Stepper_motor_control.elf
+Flash used: 3590 of 262144 bytes (1,4 %).
+SRAM used: 2521 of 65536 bytes (3,8 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 02/13/2022 10:10:00 ---------------

@@ -47,9 +47,9 @@ void waveDrive()
             {
                 stator = STATOR_STATE_2B;
             }
-
-        }
         break;
+        }
+        
         case STATOR_STATE_1B:
         {
             Pin_1a_Write(0);
@@ -65,8 +65,9 @@ void waveDrive()
             {
                 stator = STATOR_STATE_1A;
             }
+            break;
         }
-        break;
+        
         case STATOR_STATE_2A:
         {
             Pin_1a_Write(0);
@@ -81,8 +82,9 @@ void waveDrive()
             {
                 stator = STATOR_STATE_1B;
             }
+            break;
         }
-        break;
+        
         case STATOR_STATE_2B:
         {
             Pin_1a_Write(0);
@@ -97,8 +99,9 @@ void waveDrive()
             {
                 stator = STATOR_STATE_2A;
             }
+            break;
         }
-        break;
+        
     }
     
     
@@ -116,7 +119,15 @@ void fullStep()
             Pin_2b_Write(0);
             Pin_1a_Write(1);
             Pin_1b_Write(1);
+            if(clockwise)
+            {
             stator = STATOR_STATE_1B_2A;
+            }
+            else
+            {
+            stator = STATOR_STATE_2B_1A;
+            }
+                
             break;
             
         }
@@ -126,7 +137,15 @@ void fullStep()
             Pin_2b_Write(0);
             Pin_1b_Write(1);
             Pin_2a_Write(1);
+            if(clockwise)
+            {
             stator = STATOR_STATE_2A_2B;
+            }
+            else
+            {
+            stator = STATOR_STATE_1A_1B;
+            }
+                
             break;
             
         }
@@ -136,7 +155,14 @@ void fullStep()
             Pin_1b_Write(0);
             Pin_2a_Write(1);
             Pin_2b_Write(1);
+            if(clockwise)
+            {
             stator = STATOR_STATE_2B_1A;
+               }
+            else
+            {
+            stator = STATOR_STATE_1B_2A;
+            }
             
             break;
             
@@ -148,7 +174,14 @@ void fullStep()
             Pin_2a_Write(0);
             Pin_1a_Write(1);
             Pin_2b_Write(1);
+            if(clockwise)
+            {
             stator = STATOR_STATE_1A_1B;
+            }
+            else
+            {
+                stator = STATOR_STATE_2A_2B;
+            }
             break;  
         }
         default:
@@ -171,20 +204,34 @@ void halfStep()
             Pin_2a_Write(0);
             Pin_2b_Write(0);
             Pin_1a_Write(1);
-            stator = STATOR_STATE_1A_1B;
-            
+            if (clockwise)
+            {
+                stator = STATOR_STATE_1A_1B;
+            }
+            else 
+            {
+                stator = STATOR_STATE_2B_1A;
+            }
+        break;  
         }
-        break;
+        
         case STATOR_STATE_1A_1B:
         {
             Pin_2a_Write(0);
             Pin_2b_Write(0);
             Pin_1a_Write(1);
             Pin_1b_Write(1);
-            stator = STATOR_STATE_1B;
-            
-        }
+            if (clockwise)
+            {
+                stator = STATOR_STATE_1B;
+            }
+            else 
+            {
+                stator = STATOR_STATE_1A;
+            }
         break;
+        }
+        
         case STATOR_STATE_1B:
         {
             
@@ -192,58 +239,104 @@ void halfStep()
             Pin_2b_Write(0);
             Pin_1a_Write(0);
             Pin_1b_Write(1);
-            stator = STATOR_STATE_1B_2A;
+            if (clockwise)
+            {
+                stator = STATOR_STATE_1B_2A;
+            }
+            else 
+            {
+                stator = STATOR_STATE_1A_1B;
+            }
+        break;
             
         }
-        break;
+        
         case STATOR_STATE_1B_2A:
         {
             Pin_1a_Write(0);
             Pin_2b_Write(0);
             Pin_1b_Write(1);
             Pin_2a_Write(1);
-            stator = STATOR_STATE_2A;
-            
+            if (clockwise)
+            {
+                stator = STATOR_STATE_2A;
+            }
+            else 
+            {
+                stator = STATOR_STATE_1B;
+            }
+        break;  
         }
-        break;
+        
         case STATOR_STATE_2A:
         {
             Pin_1a_Write(0);
             Pin_1b_Write(0);
             Pin_2b_Write(0);
             Pin_2a_Write(1);
-            stator = STATOR_STATE_2A_2B;
+            if (clockwise)
+            {
+                stator = STATOR_STATE_2A_2B;
+            }
+            else 
+            {
+                stator = STATOR_STATE_1B_2A;
+            }
+           break;
         }
-        break;
+        
         case STATOR_STATE_2A_2B:
         {
             Pin_1a_Write(0);
             Pin_1b_Write(0);
             Pin_2a_Write(1);
             Pin_2b_Write(1);
-            stator = STATOR_STATE_2B;
+            if (clockwise)
+            {
+                stator = STATOR_STATE_2B;
+            }
+            else 
+            {
+                stator = STATOR_STATE_2A;
+            }
+        break;    
         }
-        break;
+        
         case STATOR_STATE_2B:
         {
             Pin_1a_Write(0);
             Pin_1b_Write(0);
             Pin_2a_Write(0);
             Pin_2b_Write(1);
+            if (clockwise)
+            {
+                stator = STATOR_STATE_2B_1A;
+            }
+            else 
+            {
+                stator = STATOR_STATE_2A_2B;
+            }
             stator = STATOR_STATE_2B_1A;
+        break;    
         }
-        break;
+        
         case STATOR_STATE_2B_1A:
         {
             Pin_1b_Write(0);
             Pin_2a_Write(0);
             Pin_2b_Write(1);
             Pin_1a_Write(1);
-            stator = STATOR_STATE_1A;
-        }
+            if (clockwise)
+            {
+                stator = STATOR_STATE_1A;
+            }
+            else 
+            {
+                stator = STATOR_STATE_2B;
+            }
         break;
-    }
-    
+        }  
+    }  
 }
 
 void increaseSpeed()

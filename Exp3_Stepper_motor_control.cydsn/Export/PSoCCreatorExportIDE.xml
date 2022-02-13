@@ -25,8 +25,8 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Stepper_Motor" Path="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" Version="6.0" Type="Normal">
-    <CMSIS_SVD_File>Stepper_Motor.svd</CMSIS_SVD_File>
+  <Project Name="Exp3_Stepper_motor_control" Path="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" Version="6.0" Type="Normal">
+    <CMSIS_SVD_File>Exp3_Stepper_motor_control.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
       <LinkerFile Toolchain="ARM GCC Generic">.\Generated_Source\PSoC5\cm3gcc.ld</LinkerFile>
@@ -34,8 +34,8 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC5\Cm3Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn">
+      <Folder BuildType="STRICT" Path="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn">
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">controls.c</File>
           <File BuildType="BUILD" Toolchain="">util.c</File>
@@ -44,8 +44,8 @@
           <File BuildType="BUILD" Toolchain="">util.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn\Generated_Source\PSoC5">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn">
+      <Folder BuildType="STRICT" Path="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn\Generated_Source\PSoC5">
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cymetadata.c</File>
@@ -62,6 +62,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitteriar.inc</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitter.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cydisabledsheets.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\timer_clock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\timer_clock.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_1_PM.c</File>
@@ -121,54 +123,52 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareimport.scat</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\timer_clock.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\timer_clock.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn\Export\ARM_GCC_Generic">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn">
+      <Folder BuildType="STRICT" Path="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn\Export\ARM_GCC_Generic">
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn\Export\ARM_MDK_Generic">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn">
+      <Folder BuildType="STRICT" Path="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn\Export\ARM_MDK_Generic">
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn\Export\ARM_IAR_Generic">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn">
+      <Folder BuildType="STRICT" Path="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn\Export\ARM_IAR_Generic">
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" />
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" />
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" />
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" />
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" />
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" />
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" />
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" />
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" />
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="C:\Users\sbaad\Uni_code\2_semester\GFV\Lab1\Stepper_Motor.cydsn" />
+        <Files Root="C:\sws2\GFV_LABS\Exp3_Stepper_motor_control.cydsn" />
       </Folder>
     </Folders>
   </Project>
